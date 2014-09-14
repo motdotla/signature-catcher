@@ -7,7 +7,6 @@ import (
 	"github.com/martini-contrib/binding"
 	"github.com/martini-contrib/render"
 	"github.com/motdotla/signaturelogic"
-	"log"
 	"net/http"
 	"os"
 )
