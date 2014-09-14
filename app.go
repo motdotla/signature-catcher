@@ -68,8 +68,6 @@ func ErrorPayload(logic_error *handshakejserrors.LogicError) map[string]interfac
 }
 
 func DocumentsProcessed(documents_processed_payload DocumentsProcessedPayload, req *http.Request, r render.Render) {
-	log.Println(len(documents_processed_payload.Documents))
-
 	if len(documents_processed_payload.Documents) <= 0 {
 		logic_error := &handshakejserrors.LogicError{"incorrect_payload", "", "the payload was in an unexpected format"}
 		payload := ErrorPayload(logic_error)
@@ -80,7 +78,6 @@ func DocumentsProcessed(documents_processed_payload DocumentsProcessedPayload, r
 
 		params := map[string]interface{}{"id": id, "pages": pages, "status": "processed"}
 		_, logic_error := signaturelogic.DocumentsUpdate(params)
-		log.Println(logic_error)
 		if logic_error != nil {
 			payload := ErrorPayload(logic_error)
 			statuscode := determineStatusCodeFromLogicError(logic_error)
