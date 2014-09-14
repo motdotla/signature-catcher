@@ -22,6 +22,7 @@ var (
 func CrossDomain() martini.Handler {
 	return func(res http.ResponseWriter) {
 		res.Header().Add("Access-Control-Allow-Origin", "*")
+		res.Header().Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
 	}
 }
 
