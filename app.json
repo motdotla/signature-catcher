@@ -1,17 +1,6 @@
-{                                                                      
+{
   "name": "signature-catcher",
   "description": "Catches the webhook with the converted document arriving from signature-api and updates the database",
-  "keywords": [                                                        
-    "API",                                                             
-    "convert",                                                         
-    "PDF",                                                             
-    "PNG",                                                             
-    "signature",
-    "signing",
-    "documents",
-    "webhook",
-    "catcher" 
-  ],                                                                   
   "website": "https://github.com/motdotla/signature-catcher",
   "repository": "https://github.com/motdotla/signature-catcher",
   "logo": "https://raw.githubusercontent.com/motdotla/signature-catcher/master/signature-catcher.jpg",
