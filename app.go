@@ -40,8 +40,8 @@ type Document struct {
 }
 
 type Page struct {
-	Sort int    `json:"sort"`
-	Url  string `json:"url"`
+	Number int    `json:"number"`
+	Url    string `json:"url"`
 }
 
 func main() {
